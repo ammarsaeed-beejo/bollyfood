@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Reservation v2</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" href="fonts/linearicons/style.css">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+		<!-- FONTAWESOME 5 -->
+		<link rel="stylesheet" href="fonts/font-awesome-5/css/fontawesome-all.min.css">
+
+	    <!-- BOOTSTRAP -->
+	    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+
+	    <!-- owl-carousel -->
+	    <link rel="stylesheet" href="vendor/owl-carousel/css/owl.carousel.min.css">
+	    <link rel="stylesheet" href="vendor/owl-carousel/css/owl.theme.default.min.css">
+
+	    <!-- ANIMATE -->
+	    <link rel="stylesheet" href="css/animate.css">
+
+	    <!-- DATE-PICKER -->
+		<link rel="stylesheet" href="vendor/date-picker/datepicker.min.css">
+		
+	    <!-- SLIDER REVOLUTION -->
+        <link rel="stylesheet" type="text/css" href="vendor/revolution-slider/css/layers.css">
+        <link rel="stylesheet" type="text/css" href="vendor/revolution-slider/css/navigation.css">
+        <link rel="stylesheet" type="text/css" href="vendor/revolution-slider/css/settings.css">
+
+        <!-- SIDENAV MOBILE -->
+        <link rel="stylesheet" href="vendor/hcmobilenav/demo.css">
+
+        <!-- JQUERY TIME PICKER -->
+        <link rel="stylesheet" href="vendor/jquery-timepicker-master/jquery.timepicker.css">
+
+		<!-- FAVICON -->
+        <link rel="shortcut icon" href="favicon.png">
+
+	    <!-- STYLE CSS -->
+	    <link rel="stylesheet" href="css/style.css" />
+	</head>
+	
+	<body class="preload">
+
+		<!-- PAGE LOADER -->
+		<div class="images-preloader">
+		    <div id="preloader" class="rectangle-bounce">
+		        <span></span>
+		        <span></span>
+		        <span></span>
+		        <span></span>
+		        <span></span>
+		    </div>
+		</div>
+		
+		<header>
+			<!-- HEADER ON DESKTOP -->
+			<nav class="navbar-desktop">
+				<div class="left">
+					<a href="index.html" class="logo">
+						<img src="images/logo-1.png" alt="bollyfood">
+					</a>
+				</div>
+				<ul>
+					<li class="current has-children">
+						<a href="#">
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="#MENU">
+							Menu
+						</a>
+					</li>
+					<li class="has-children">
+						<a href="#">
+							Reservation
+						</a>
+						
+					</li>
+	
+	
+				</ul>
+				<div class="right">
+					<div class="action">
+						<div class="notify">
+							<img src="images/notify.png" alt="">
+							<span class="notify-amount">0</span>
+	
+							<!-- WIDGET SHOPPING -->
+							<div id="woocommerce_widget_cart-2" class="widget woocommerce widget_shopping_cart">
+								<div class="widget_shopping_cart_content">
+									<ul class="woocommerce-mini-cart cart_list product_list_widget ">
+										<li class="woocommerce-mini-cart-item mini_cart_item clearfix">
+											<a href="#" class="remove remove_from_cart_button"
+												aria-label="Remove this item">
+												<span class="lnr lnr-cross-circle"></span>
+											</a>
+											<a href="#" class="image-holder">
+												<img src="images/widget-cart-thumb-1.jpg"
+													class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image"
+													alt="">
+												<span class="product-name">Best Brownies</span>
+											</a>
+											<span class="quantity">
+												<span class="woocommerce-Price-amount amount">
+													<span class="woocommerce-Price-currencySymbol">$</span>18
+												</span>
+												x1
+											</span>
+										</li>
+										<li class="woocommerce-mini-cart-item mini_cart_item clearfix">
+											<a href="#" class="remove remove_from_cart_button"
+												aria-label="Remove this item">
+												<span class="lnr lnr-cross-circle"></span>
+											</a>
+											<a href="#" class="image-holder">
+												<img src="images/widget-cart-thumb-2.jpg"
+													class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image"
+													alt="">
+												<span class="product-name">Angela's Awesome</span>
+											</a>
+											<span class="quantity">
+												<span class="woocommerce-Price-amount amount">
+													<span class="woocommerce-Price-currencySymbol">$</span>28
+												</span>
+												x3
+											</span>
+										</li>
+									</ul>
+									<p class="woocommerce-mini-cart__total total">
+										<strong>Subtotal:</strong>
+										<span class="woocommerce-Price-amount amount">
+											<span class="woocommerce-Price-currencySymbol">$</span>102
+										</span>
+									</p>
+									<p class="woocommerce-mini-cart__total total">
+										<strong>Total:</strong>
+										<span class="woocommerce-Price-amount amount color-cdaa7c">
+											<span class="woocommerce-Price-currencySymbol">$</span>102
+										</span>
+									</p>
+									<p class="woocommerce-mini-cart__buttons buttons">
+										<a href="#" class="button wc-forward view-cart">View cart</a>
+										<a href="#" class="button checkout wc-forward">Checkout</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+	
+			<!-- HEADER ON MOBILE -->
+			<nav class="navbar-mobile">
+				<div class="container">
+					<div class="heading">
+						<div class="left">
+							<a href="#" class="navbar-mobile__toggler">
+								<span></span>
+								<span></span>
+								<span></span>
+							</a>
+						</div>
+						<a href="index.html" class="logo">
+							<img src="images/logo-1.png" alt="Royate">
+						</a>
+						<!-- سيرش و كارت -->
+						<div class="right">
+							<div class="action">
+								<div class="notify">
+									<a href="#cart"><img src="images/notify.png" alt=""></a>
+									<span class="notify-amount">0</span>
+								</div>
+	
+							</div>
+							<!-- سيرش و كارت -->
+						</div>
+					</div>
+					<nav id="main-nav">
+						<ul>
+							<li class="current">
+								<a href="#" target="_blank">Home</a>
+	
+							</li>
+	
+							<li>
+								<a href="#MENU">
+									Menu
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Reservation
+								</a>
+	
+							</li>
+	
+						</ul>
+					</nav>
+			</nav>
+			<!-- سيرش	
+				
+				<div class="modal-search modal" id="modalSearch" tabindex="-1" role="dialog" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<form method="get">
+								<input type="text" placeholder="Search">
+								<button>
+									<span class="lnr lnr-magnifier"></span>
+								</button>
+							</form>
+						</div>
+					</div>
+					<span class="lnr lnr-cross" data-toggle="modal" data-target="#modalSearch"></span>
+				</div>
+		 -->
+		</header>
+		
+		<main>
+			<!-- PAGE INFO -->
+			<section class="page-info set-bg" data-image-src="images/131218992_190054162801433_3167393803176496695_n.jpg">
+				<div class="section-header">
+					<h1 class="text-white">Reservatoin</h1>
+					<span>~ For the best location ~</span>
+				</div>
+			</section>
+
+			<!-- FORM -->
+			<section class="section-primary pb-110 reservation">
+				<div class="container">
+					<form action="#">
+						<div class="row">
+							<div class="col-md form-col">
+								<div class="select">
+	                                <div class="form-holder">
+	                                    <div class="form-control">1 people</div>
+	                                    <span class="lnr lnr-chevron-down primary-color"></span>
+	                                </div>
+	                                <ul class="dropdown">
+	                                    <li data-value="1 people">1 people</li>
+	                                    <li data-value="2 people">2 people</li>
+	                                    <li data-value="3 people">3 people</li>
+	                                    <li data-value="4 people">4 people</li>
+	                                    <li data-value="5 people">5 people</li>
+	                                    <li data-value="6 people">6 people</li>
+	                                    <li data-value="7 people">7 people</li>
+	                                    <li data-value="8 people">8 people</li>
+	                                    <li data-value="9 people">9 people</li>
+	                                    <li data-value="10 people">10 people</li>
+	                                </ul>
+	                            </div>
+							</div>
+							<div class="col-md form-col">
+								<div class="form-holder">
+	                            	<input type="text" class="form-control datepicker-here" data-language='en' data-date-format="dd - mm - yyyy" placeholder="Date">
+	                                <span class="lnr lnr-calendar-full big primary-color"></span>
+	                            </div>
+							</div>
+							<div class="col-md form-col">
+								<div class="form-holder">
+	                            	<input type="text" class="form-control time-picker" placeholder="Time">
+	                                <span class="lnr lnr-clock big primary-color"></span>
+	                            </div>
+							</div>
+							<div class="col-lg-auto">
+								<button class="au-btn round au-btn--hover has-bg">Book now</button>
+							</div>
+						</div>
+					</form>	
+					
+					
+					
+				
+				</div>
+			</section>
+		</main>
+		
+		<footer>
+			<!-- FOOTER TOP -->
+			<div class="ft-top text-center text-md-left">
+				<div class="container">
+					<div class="ft-top-wrapper pb-54">
+						<div class="row">
+							<div class="col-md-6 col-lg-3 ft-col">
+								<a href="index.html">
+									<img src="images/logo-1.png" alt="">
+								</a>
+								<p class="style">مطعم_بوليفود_الهندي 😍
+									يقدم أشهى المأكولات الهندية المميزة بمذاق رائع على ايدي امهر الطهاة الهنود 👳‍♂️</p>
+								<!-- SOCIAL -->
+								<div class="social">
+									<a href="https://web.facebook.com/bollyfoood">
+										<i class="zmdi zmdi-facebook-box" style="color: #f7ac40;"></i>
+									</a>		
+									<a href="https://www.instagram.com/bollyfood_/">
+										<i class="zmdi zmdi-instagram"style="color: #f7ac40;"></i>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-3 ft-col mt-51 pl-64">
+								<h6>Address</h6>
+								<!-- CONTACT -->
+								<div class="contact-part">
+									<div class="contact-line">
+										<span class="lnr lnr-home"></span>
+										<span>الهاشمي الشمالي - شارع البطحاء - اشارة العنبتاوي</span>
+									</div>
+									<div class="contact-line">
+										<a href="tel:00962798610096">
+											<span class="lnr lnr-phone-handset"></span>
+											<span> + (962) 798610096</span>
+										</a>
+									</div>
+									
+									
+							
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-3 ft-col mt-51 pl-30">
+								<h6 class="mb-33">Find us</h6>
+								<!-- MAP -->
+								<div class="js-google-map">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2393.163023326004!2d35.95062714824011!3d31.975987996552135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x78c6aad919afd983!2sbollyfood%20restaurant!5e0!3m2!1sen!2sjo!4v1643922289732!5m2!1sen!2sjo" width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ft-bot">
+				<div class="container">
+					©2021 AYAtec All Rights Reserved
+				</div>
+			</div>
+		</footer>
+
+		<!-- CLICK TO TOP -->
+		<div class="click-to-top">
+		    <span class="lnr lnr-arrow-up"></span>
+		</div>
+
+		<!-- jQUERY -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+
+		<!-- BOOTSTRAP JS -->
+		<script src="vendor/bootstrap/bootstrap.min.js"></script>
+
+		<!-- Slider Revolution core JavaScript files -->
+        <script src="vendor/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="vendor/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
+
+        <!-- Slider Revolution extension scripts. ONLY NEEDED FOR LOCAL TESTING --> 
+        <script src="vendor/revolution-slider/js/revolution.extension.actions.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.carousel.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.kenburn.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.layeranimation.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.migration.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.navigation.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.parallax.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.slideanims.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.video.min.js"></script>
+
+		<!-- CAROUSEL JS -->
+		<script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+		<!-- SWEET ALERT -->
+		<script src="js/sweetalert.min.js"></script>
+
+		<!-- SIDENAV MOBILE -->
+		<script src="vendor/hcmobilenav/hc-mobile-nav.js"></script>
+
+		<!-- LIGHT GALLERY -->
+		<script src="vendor/lightgallery/js/jquery.mousewheel.min.js"></script>
+		<script src="vendor/lightgallery/js/lightgallery-all.min.js"></script>
+
+		<!-- JQUERY UI -->
+		<script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+
+		<!-- DATE-PICKER -->
+		<script src="vendor/date-picker/datepicker.js"></script>
+		<script src="vendor/date-picker/datepicker.en.js"></script>
+
+		<!-- JQUERY TIMEPICKER -->
+		<script src="vendor/jquery-timepicker-master/jquery.timepicker.min.js"></script>
+
+		<script src="js/main.min.js"></script>
+
+	</body>
+</html>
