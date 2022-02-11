@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+		<meta charset="utf-8">
+		<title>Shop Single</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- LINEARICONS -->
+		<link rel="stylesheet" href="fonts/linearicons/style.css">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+		<!-- FONTAWESOME 5 -->
+		<link rel="stylesheet" href="fonts/font-awesome-5/css/fontawesome-all.min.css">
+
+	    <!-- BOOTSTRAP -->
+	    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+
+	    <!-- owl-carousel -->
+	    <link rel="stylesheet" href="vendor/owl-carousel/css/owl.carousel.min.css">
+	    <link rel="stylesheet" href="vendor/owl-carousel/css/owl.theme.default.min.css">
+
+	    <!-- LIGHT GALLERY -->
+	    <link rel="stylesheet" href="vendor/lightgallery/css/lightgallery.min.css">
+		
+	    <!-- ANIMATE -->
+	    <link rel="stylesheet" href="css/animate.css">
+
+	    <!-- DATE-PICKER -->
+		<link rel="stylesheet" href="vendor/date-picker/datepicker.min.css">
+		
+	    <!-- SLIDER REVOLUTION -->
+        <link rel="stylesheet" type="text/css" href="vendor/revolution-slider/css/layers.css">
+        <link rel="stylesheet" type="text/css" href="vendor/revolution-slider/css/navigation.css">
+        <link rel="stylesheet" type="text/css" href="vendor/revolution-slider/css/settings.css">
+
+        <!-- SIDENAV MOBILE -->
+        <link rel="stylesheet" href="vendor/hcmobilenav/demo.css">
+
+        <!-- JQUERY TIME PICKER -->
+        <link rel="stylesheet" href="vendor/jquery-timepicker-master/jquery.timepicker.css">
+
+        <!-- NOUISLIDER -->
+	    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+
+		<!-- FAVICON -->
+        <link rel="shortcut icon" href="favicon.png">
+
+	    <!-- STYLE CSS -->
+	    <link rel="stylesheet" href="css/style.css" />
+	</head>
+
+<body class="preload style-color-1">
+
+
+    <section class="checkout-page section-primary pt-120">
+        <div class="container">
+            <div class="woocommerce">
+                <form method="get" class="checkout woocommerce-checkout">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="woocommerce-Customer-fields">
+                                <h5>بيانات الطلب</h5>
+                                <div class="woocommerce-Customer-fields__field-wrapper">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="form-row form-row-first validate-required woocommerce-invalid woocommerce-invalid-required-field"
+                                                id="Customer_first_name_field">
+                                                <label for="Customer_first_name">الاسم الاول
+
+                                                </label>
+                                                <input class="form-control" type="text" name="Customer_first_name"
+                                                    id="Customer_first_name">
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="form-row form-row-last validate-required"
+                                                id="Customer_last_name_field">
+                                                <label for="Customer_last_name">الاسم الاخير
+                                                </label>
+                                                <input class="form-control" type="text" name="Customer_last_name"
+                                                    id="Customer_last_name">
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="form-row form-row-first validate-required woocommerce-invalid woocommerce-invalid-required-field"
+                                                id="Customer_first_name_field">
+                                                <label for="Customer_first_name">رقم التلفون
+
+                                                </label>
+                                                <input class="form-control" type="tel" name="Customer_number-1"
+                                                    id="Customer_number-1" placeholder="07********">
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="form-row form-row-last validate-required"
+                                                id="Customer_last_name_field">
+                                                <label for="Customer_last_name">رقم احتياطي (اختياري)
+                                                </label>
+                                                <input class="form-control" type="tel" name="Customer_number-2"
+                                                    id="Customer_number-2" placeholder="07********">
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <p class="form-row form-row-wide address-field validate-required"
+                                        id="Customer_address_1_field" data-priority="50">
+                                        <label for="Customer_address_1" class="">العنوان
+
+                                        </label>
+                                        <input type="text" class="form-control" name="Customer_address_1"
+                                            id="Customer_address_1" placeholder="اسم المنطقة" value=""
+                                            autocomplete="address-line1">
+                                        <input type="text" class="form-control" name="Customer_address_2"
+                                            id="Customer_address_2" placeholder="اسم الشارع" value=""
+                                            autocomplete="address-line1">
+                                        <input type="number" class="form-control" name="Customer_Build_2"
+                                            id="Customer_address_2" placeholder="رقم البناء" value=""
+                                            autocomplete="address-line1">
+                                        <input type="number" class="form-control" name="Customer_address_2"
+                                            id="Customer_address_2" placeholder="رقم الطابق" value=""
+                                            autocomplete="address-line1">
+                                        <input type="number" class="form-control" name="Customer_address_2"
+                                            id="Customer_address_2" placeholder="رقم الشقة" value=""
+                                            autocomplete="address-line1">
+                                    </p>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="form-row form-row-last validate-required validate-email"
+                                                id="Customer_email_field" data-priority="110">
+                                                <label for="Customer_email" class="">Email
+                                                </label>
+                                                <input type="email" class="form-control" name="Customer_email"
+                                                    id="Customer_email" placeholder="" value="">
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="woocommerce-additional-fields">
+                                        <h5>معلومة اضافية</h5>
+                                        <div class="woocommerce-additional-fields__field-wrapper">
+                                            <p class="form-row notes" id="order_comments_field" data-priority="">
+                                                <label for="order_comments" class="">ملاحظات</label>
+                                                <textarea name="order_comments" class="form-control" id="order_comments"
+                                                   ></textarea>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                             
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="woocommerce-checkout-review-order-wrap">
+                                <h5 id="order_review_heading">تفاصيل الطلب</h5>
+                                <div id="order_review" class="woocommerce-checkout-review-order">
+                                    <table class="shop_table woocommerce-checkout-review-order-table">
+                                        <tbody>
+                                            <tr class="cart_item">
+                                                <td class="product-name">
+                                                    <img src="https://freebw.com/templates/royate/images/check-out-1.jpg"
+                                                        alt="">
+                                                    <div class="review-wrap">
+                                                        <span class="rv-titel">Best Brownies</span>
+                                                        <span class="product-quantity">x1</span>
+                                                        <span class="woocommerce-Price-amount amount">
+                                                            <span class="woocommerce-Price-currencySymbol">$</span>18
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                
+                                                <td id="plus">
+                                                    <button style="color:#fff; background-color:#f7ac40; border-color: #f7ac40;" class="btn btn-primary" onclick="reduceAmount()">-</button>
+                                                    <input style="width: 2rem;" id="input"" disabled>
+                                                    <button style="color:#fff; background-color:#f7ac40; border-color: #f7ac40;" class="btn btn-primary" onclick="addAmount()" >+</button>
+                                                    </td>
+                                            </tr>
+                                           
+                                        </tbody>
+                                    </table>
+                                    <div class="cart-total">
+                                       
+
+                                        <div class="order-total">
+                                            <p>
+                                                <span class="title">Total</span>
+                                                <span class="woocommerce-Price-amount amount">
+                                                    <span class="woocommerce-Price-currencySymbol">$</span>102
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="payment" class="woocommerce-checkout-payment">
+                                        <div class="form-row place-order">
+                                            <button onclick="buy()" class="btn btn-success">اتمام الطلب</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>  	
+
+    
+    <script src="js/main.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.13.0/dist/sweetalert2.all.min.js"></script>
+
+    		<!-- jQUERY -->
+		<script src="js/jquery-3.3.1.min.js"></script>
+
+		<!-- BOOTSTRAP JS -->
+		<script src="vendor/bootstrap/bootstrap.min.js"></script>
+
+		<!-- Slider Revolution core JavaScript files -->
+        <script src="vendor/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="vendor/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
+
+        <!-- Slider Revolution extension scripts. ONLY NEEDED FOR LOCAL TESTING --> 
+        <script src="vendor/revolution-slider/js/revolution.extension.actions.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.carousel.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.kenburn.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.layeranimation.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.migration.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.navigation.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.parallax.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.slideanims.min.js"></script>
+        <script src="vendor/revolution-slider/js/revolution.extension.video.min.js"></script>
+
+        <!-- MAP JS-->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEmXgQ65zpsjsEAfNPP9mBAz-5zjnIZBw"></script>
+		<script src="js/theme-map.js"></script>
+
+		<!-- CAROUSEL JS -->
+		<script src="vendor/owl-carousel/js/owl.carousel.min.js"></script>
+		<script src="vendor/owl-carousel/js/owl.carousel2.thumbs.min.js"></script>
+
+		<!-- SWEET ALERT -->
+		<script src="js/sweetalert.min.js"></script>
+
+		<!-- SIDENAV MOBILE -->
+		<script src="vendor/hcmobilenav/hc-mobile-nav.js"></script>
+
+		<!-- LIGHT GALLERY -->
+		<script src="vendor/lightgallery/js/jquery.mousewheel.min.js"></script>
+		<script src="vendor/lightgallery/js/lightgallery-all.min.js"></script>
+
+		<!-- JQUERY UI -->
+		<script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+
+		<!-- DATE-PICKER -->
+		<script src="vendor/date-picker/datepicker.js"></script>
+		<script src="vendor/date-picker/datepicker.en.js"></script>
+
+		<!-- JQUERY TIMEPICKER -->
+		<script src="vendor/jquery-timepicker-master/jquery.timepicker.min.js"></script>
+        <!-- noUISlider -->
+		<script src="vendor/nouislider/nouislider.min.js"></script>
+
+		<!-- ELEVATE ZOOM -->
+		<script src="vendor/elevatezoom-master/jquery.elevatezoom.js"></script>
+
+	
+	</body>
+</html>
