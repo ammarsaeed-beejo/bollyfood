@@ -224,6 +224,34 @@ var products = [
   },
 ];
 
+var categorys = [
+  { title: "All", data: "*" },
+  { title: "Rice", data: "rice" },
+  { title: "Sea", data: "sea" },
+  { title: "Chicken", data: "chicken" },
+  { title: "Sandwich", data: "sandwich" },
+];
+
+var firstcustomername = document.getElementById("Customer_first_name");
+
+var Second_customer_name = document.getElementById("Second_customer_name");
+
+var Customer_number_1 = document.getElementById("Customer_number_1");
+
+var Customer_number_2 = document.getElementById("Customer_number_2");
+
+var Area_name = document.getElementById("Area_name");
+
+var Street_name = document.getElementById("Street_name");
+
+var Floor_number = document.getElementById("Floor_number");
+
+var Apartment_number = document.getElementById("Apartment_number");
+
+var Notes = document.getElementById("order_comments");
+
+var notify = document.getElementById("notify_amount");
+
 var con2 = []; //POSITION AT TABLE
 
 var con = 0;
@@ -233,14 +261,13 @@ var order = [];
 function buy() {
   for (let index = 0; index < con2.length; index++) {
     var position = con2[index];
-    var indicator = document.getElementById("indicator");
     for (let index3 = 0; index3 < products.length; index3++) {
       if (position == products[index3].id) {
         order.push(
           "%0a" + "الكمية : " + products[index3].quantity + " ",
           products[index3].name + " ",
-          "السعر : " + products[index3].price + " ",
-          (indicator = order.length)
+          "السعر : " + products[index3].price + " "
+
           // "total : " + products[index3].total + "%0a",
         );
         products[index3].total =
@@ -252,13 +279,36 @@ function buy() {
     con = con + 1;
   }
 
-  var productsFirebase = [];
   for (let index = 0; index < products.length; index++) {
     if (products[index].cart) {
       var url =
-        "https://wa.me/+962790906363?text=" +
-        "اسم العميل : " +
-        customername.value +
+        "https://wa.me/+962797012519?text=" +
+        " اسم العميل الأول : " +
+        firstcustomername.value +
+        "%0a" +
+        "اسم عائلة العميل: " +
+        Second_customer_name.value +
+        "%0a" +
+        "رقم رئيسي: " +
+        Customer_number_1.value +
+        "%0a" +
+        "رقم احتياطي: " +
+        Customer_number_2.value +
+        "%0a" +
+        "اسم المنطقة: " +
+        Area_name.value +
+        "%0a" +
+        "اسم الشارع: " +
+        Street_name.value +
+        "%0a" +
+        "رقم البناء: " +
+        building_number.value +
+        "%0a" +
+        "رقم الطابق: " +
+        Floor_number.value +
+        "%0a" +
+        "رقم الشقة: " +
+        Apartment_number.value +
         "%0a" +
         "ملخص الطلب: " +
         order +
@@ -301,87 +351,64 @@ function add(id) {
       products[index].cart = true;
       con2.push(products[index].id);
       document.getElementById("tableProducts").innerHTML += `
-      <tbody>
-          <tr class="woocommerce-cart-form__cart-item cart_item">
-            <td class="product-remove">
-              <button class="remove" onclick="remove(${products[index].id})">
-                <span class="lnr lnr-cross-circle"></span>
-              </button>
-            </td>
+      <td class="product-remove">
+      <button class="btn btn-danger" onclick="remove(${
+        products[index].id
+      })">X</button>
+    </td>
 
-            <td class="product-thumbnail">
-              <a href="">
-                <img src="${products[index].img}" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="">
-              </a>
-            </td>
+    <td class="product-thumbnail">
+      <a href="">
+        <img  style="width: 230px;" id="cartimg" src="${
+          products[index].img
+        }" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" />
+      </a>						
+    </td>
 
-            <td class="product-name" data-title="Product">
-              <a href="shop-single.html">${products[index].name}</a>
-            </td>
+    <td class="product-name" data-title="Product">
+      <a>${products[index].name}</a>	
+    </td>
 
-            <td class="product-price" data-title="Price">
-              <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>${products[index].price}</span>
-            </td>
-            <td class="product-quantity" data-title="Quantity">
-              <div class="quantity">
-                <button class="btn btn-primary" onclick="reduceAmount(${
-       products[index].id
-     })">-</button>
-     <input style="width: 2rem;" id="input${products[index].id}" value="${
+    <td class="product-price" data-title="Price">
+      <span class="woocommerce-Price-amount amount">${
+        products[index].price
+      } jd</span>	
+    </td>
+    <td class="product-quantity" data-title="Quantity">
+      <div class="quantity">
+      <button class="btn btn-primary" onclick="reduceAmount(${
+        products[index].id
+      })">-</button>
+       <input style="width: 2rem;" id="input${products[index].id}" value="${
         products[index].quantity
       }" disabled>
-     <button class="btn btn-primary" onclick="addAmount(${
-       products[index].id
-     })" >+</button>
-              </div>
-            </td>
-            <td class="product-subtotal" data-title="Total">
-               ${products[index].price * products[index].quantity} jd
-            </td>
-          </tr>
-
-          <tr>
-            <td class="product-remove none">&nbsp;</td>
-            <td colspan="3" class="actions">
-              
-            </td>
-            <td colspan="2" class="cart-subtotal">
-              <label>Subtotal:</label>
-              <span class="woocommerce-Price-amount amount">
-                ${total()}
-              </span>
-            </td>
-          </tr>
-        </tbody>
-    `;
+       <button class="btn btn-primary" onclick="addAmount(${
+         products[index].id
+       })" >+</button>
+      </div>
+    </td>
+    <td class="product-subtotal" data-title="Total">
+      <span class="woocommerce-Price-amount amount">${
+        products[index].price * products[index].quantity
+      } jd</span>		
+    </td>
+    
+     
+     
+     `;
       con++;
       products[index].total = products[index].price * products[index].quantity;
+      notify.innerText = con2.length;
     }
   }
 
   document.getElementById("total").innerHTML = `
-   <tr>
-   <th scope="row"></th>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td>
-       <h4>Total:</h4>
-   </td>
+   
+   
    <td> ${total()} jd</td>
-    </tr>
-    <tr>
-    <th scope="row"></th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>
+   
  
-    </td>
-    <td>
-      <button onclick="buy()"class="btn btn-success">Buy</button>
-    </td>
-     </tr>
+ 
    `;
 }
 
@@ -398,6 +425,7 @@ function remove(id) {
         } else {
         }
       }
+      notify.innerText = con2.length;
 
       updateCart();
     } else {
@@ -415,67 +443,56 @@ function updateCart() {
     for (let index3 = 0; index3 < products.length; index3++) {
       if (position == products[index3].id) {
         document.getElementById("tableProducts").innerHTML += `
-        <tbody>
-        <tr class="woocommerce-cart-form__cart-item cart_item">
-          <td class="product-remove">
-            <button class="remove" onclick="remove(${products[index].id})">
-              <span class="lnr lnr-cross-circle"></span>
-            </button>
-          </td>
 
-          <td class="product-thumbnail">
-            <a href="">
-              <img src="${products[index].img}" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="">
-            </a>
-          </td>
 
-          <td class="product-name" data-title="Product">
-            <a href="shop-single.html">${products[index].name}</a>
-          </td>
+        <td class="product-remove">
+       <button class="btn btn-danger" onclick="remove(${
+         products[index3].id
+       })">X</button>
+										</td>
 
-          <td class="product-price" data-title="Price">
-            <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>${products[index].price}</span>
-          </td>
-          <td class="product-quantity" data-title="Quantity">
-            <div class="quantity">
-              <button class="btn btn-primary" onclick="reduceAmount(${
-     products[index].id
-   })">-</button>
-   <input style="width: 2rem;" id="input${products[index].id}" value="${
-      products[index].quantity
-    }" disabled>
-   <button class="btn btn-primary" onclick="addAmount(${
-     products[index].id
-   })" >+</button>
-            </div>
-          </td>
-          <td class="product-subtotal" data-title="Total">
-             ${products[index].price * products[index].quantity} jd
-          </td>
-        </tr>
+										<td class="product-thumbnail">
+											<a href="">
+												<img  style="width: 230px;" id="cartimg" src="${
+                          products[index3].img
+                        }" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" />
+											</a>						
+										</td>
 
-        <tr>
-          <td class="product-remove none">&nbsp;</td>
-          <td colspan="3" class="actions">
-            
-          </td>
-          <td colspan="2" class="cart-subtotal">
-            <label>Subtotal:</label>
-            <span class="woocommerce-Price-amount amount">
-              ${total()}
-            </span>
-          </td>
-        </tr>
-         <div id="total">
-		asd
-				</div>
-      </tbody>
+										<td class="product-name" data-title="Product">
+											<a>${products[index3].name}</a>	
+										</td>
 
-     
+										<td class="product-price" data-title="Price">
+											<span class="woocommerce-Price-amount amount">${
+                        products[index3].price
+                      } jd</span>	
+										</td>
+										<td class="product-quantity" data-title="Quantity">
+											<div class="quantity">
+                      <button class="btn btn-primary" onclick="reduceAmount(${
+                        products[index3].id
+                      })">-</button>
+                       <input style="width: 2rem;" id="input${
+                         products[index3].id
+                       }" value="${products[index3].quantity}" disabled>
+                       <button class="btn btn-primary" onclick="addAmount(${
+                         products[index3].id
+                       })" >+</button>
+											</div>
+										</td>
+										<td class="product-subtotal" data-title="Total">
+											<span class="woocommerce-Price-amount amount">${
+                        products[index3].price * products[index3].quantity
+                      } jd</span>		
+										</td>
+        
+          
             
            `;
         products[index3].total =
           products[index3].price * products[index3].quantity;
+        notify.innerText = con2.length;
       } else {
       }
     }
@@ -486,28 +503,9 @@ function updateCart() {
     document.getElementById("total").innerHTML = "";
   } else {
     document.getElementById("total").innerHTML = `
-    <tr>
-    <th scope="row"></th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>
-        <h4>Total:</h4>
-    </td>
+    
     <td>${total(totalTable)} jd</td>
-     </tr>
-     <tr>
-     <th scope="row"></th>
-     <td></td>
-     <td></td>
-     <td></td>
-     <td>
-
-     </td>
-     <td>
-       <button onclick="buy()" class="btn btn-success">Buy</button>
-     </td>
-      </tr>
+     
     `;
   }
 }
@@ -517,6 +515,8 @@ function reduceAmount(id) {
     if (products[index].id == id) {
       if (products[index].quantity > 1) {
         products[index].quantity = products[index].quantity - 1;
+        notify.innerText = con2.length;
+
         updateCart();
       } else {
       }
@@ -530,6 +530,7 @@ function addAmount(id) {
     if (products[index].id == id) {
       if (products[index].quantity > 0) {
         products[index].quantity = products[index].quantity + 1;
+
         updateCart();
       } else {
       }
@@ -538,21 +539,51 @@ function addAmount(id) {
   }
 }
 
-(() => {
-  for (let index = 0; index < products.length; index++) {
-    document.getElementById("row1").innerHTML += `
-    <div class="col-md-2 menu-holder left">
-    <a href="shop-single.html" class="menu-thumb">
-      <img src="${products[index].img}" style="width: 100px;"  alt="">
-    </a>
-    <div class="menu-item">
-      <h5 id="nam" class="bold-color">
-        <a>${products[index].name}</a>
-        <p class="card-text"> ${products[index].price} jd</p>
-      </h5>
+function changeCategory(data) {
+  products = products.filter((product) => product.class == data);
+}
 
-      <button id="addbtn" onclick="add('${products[index].id}')">Add</button>
-    </div>
-  </div> `;
+function renderItems() {
+  for (let index = 0; index < products.length; index++) {
+    document.getElementById("all").innerHTML += `
+    
+  
+  <div class="col-md-6 col-lg-5 col-xl-6 menu-holder fixed left-40">
+                    <a class="menu-thumb">
+                      <img src="${products[index].img}" alt="">
+                    </a>
+                    <div class="menu-item">
+                      <h5 class="color-fff">
+                        <a${products[index].name}</a>
+                        <span class="dots"></span>
+                        <span class="price">
+                        ${products[index].price} jd
+                        </span>
+                      </h5>
+                      <ul>
+                        <li>
+                        ${products[index].Describe}
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <button type="button" id="addbtn" onclick="add('${products[index].id}')">Add</button>
+                  </div> 
+  `;
   }
-})();
+}
+
+function renderCategory() {
+  for (let index = 0; index < categorys.length; index++) {
+    document.getElementById("category").innerHTML += `
+      <li class="" onclick = "changeCategory('${categorys[index].data}')">
+          <img src="images/appetizer-square.png" alt="">
+          <span>${categorys[index].title}</span>
+        </a>
+      </li>
+    `;
+  }
+}
+
+renderCategory();
+renderItems();
