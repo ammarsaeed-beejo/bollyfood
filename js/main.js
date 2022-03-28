@@ -422,7 +422,7 @@
     var defaultData = {
         maxWidth: false,
         customToggle: $toggle,
-        navTitle: 'Menu'
+        navTitle: 'sdsdsd   '
     };
     // we'll store our temp stuff here
     var $clone = null;

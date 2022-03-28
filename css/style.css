@@ -22,8 +22,12 @@ body {
   font-weight: 400;
 }
 
+main{
+  background-color: rgb(12, 12, 12);
+}
+
 #menuimg {
-  width: 150px;
+  width: 40%;
   margin-bottom: 20px;
 }
 
@@ -34,8 +38,16 @@ body {
   padding-right: 16px;
 }
 
+#filterItems{
+  background-color: transparent;
+  border: navajowhite;
+  margin-right: 10px;
+  color: #f7ac40;
+}
+
 .btn-primary {
   height: 31.9px;
+  border: none;
 }
 
 #plus {
@@ -190,7 +202,7 @@ h4,
 h5,
 h6 {
   line-height: 1.3;
-  color: #016e6b;
+  color: #ffffff;
 }
 
 h1 {
@@ -511,7 +523,7 @@ select option[value=""][disabled] {
 .page-info {
   background-attachment: fixed;
   background-position: top;
-  height: 550px;
+  height: 304px;
   position: relative;
   text-align: center;
   background-repeat: no-repeat;
@@ -1876,6 +1888,7 @@ select option[value=""][disabled] {
   padding: 35px 30px;
 }
 
+
 .widget_shopping_cart_content ul.woocommerce-mini-cart {
   margin-bottom: 23px;
   display: block;
@@ -2225,7 +2238,7 @@ body.center {
 
 .page-wrapper main {
   width: 84.375%;
-  background: #016e6b;
+  background: #000000;
 }
 
 .page-wrapper main .rev_slider_wrapper {
@@ -3107,9 +3120,9 @@ body.center {
   -ms-display: flex;
   -o-display: flex;
   display: flex;
-  background: #016e6b;
+  background: #000;
   position: relative;
-  height: 1000px;
+  height: auto;
 }
 .our-menu-wrapper .image-holder {
   width: 42.58%;
@@ -3143,6 +3156,8 @@ body.center {
 }
 .our-menu-wrapper .right-content .menu-holder {
   margin-bottom: 28px;
+  display: block;
+
 }
 .our-menu-wrapper .right-content .menu-navigation {
   margin-bottom: 51px;
@@ -3269,6 +3284,7 @@ body.center {
 
 .menu-item {
   margin-bottom: 29px;
+  font-family: "Cairo", sans-serif;
 }
 .menu-item:last-child {
   margin-bottom: 0;
@@ -3289,6 +3305,7 @@ body.center {
 }
 .menu-item h5.color-fff a {
   color: #fff;
+  font-family: "Cairo", sans-serif;
 }
 .menu-item h5.bold-color {
   color: #333;
@@ -5470,7 +5487,6 @@ body.center {
 
 .notify_amount {
   color: #fff;
-  color: #fff;
   position: absolute;
   left: 9.9px;
   top: 1.1px;
@@ -6663,12 +6679,7 @@ body.center {
   border-color: rgba(241, 177, 212, 0.5);
 }
 
-@media only screen and (min-width: 1100px) {
-  .cd-horizontal-timeline::before {
-    /* never visible - this is used in jQuery to check the current MQ */
-    content: "desktop";
-  }
-}
+
 
 .cd-timeline-navigation {
   -webkit-display: flex;
@@ -9277,6 +9288,7 @@ footer {
   margin-bottom: 40px;
 }
 
+
 .sorting .woocommerce-ordering {
   -webkit-display: flex;
   -moz-display: flex;
@@ -9886,7 +9898,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .woocommerce-cart-form table thead th {
   font-size: 20px;
-  color: #016e6b;
+  color: #fff;
   font-weight: 600;
   padding: 24px 0;
 }
@@ -9980,7 +9992,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   text-align: right;
   padding-right: 83px;
   font-size: 18px;
-  color: #cdaa7c;
+  color: #fff;
   font-family: "Raleway-Medium";
   font-weight: 500;
 }
@@ -10507,6 +10519,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   display: block;
 }
 
+#cartimg{
+  width: 50%;
+}
+
 .checkout-page .wc_payment_method .checkmark {
   position: absolute;
   top: 4px;
@@ -10571,8 +10587,17 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background: #4d4d4d;
 }
 
+#butadd{
+  width: 70px;
+  background-color: #f7ac40;
+  padding: 2px 6px 6px 6px;
+  margin-top: 20px;
+}
+
+
 /* 10. Responsive
 ----------------------------------------------------------*/
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px;
@@ -10698,6 +10723,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
   .our-menu-wrapper .menu-holder.left-40 {
     padding-right: 15px;
+    text-align: center;
   }
 
   .our-menu-wrapper .menu-holder.right-40 {
@@ -11159,6 +11185,20 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
   .our-service-full .service-text {
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .cd-horizontal-timeline::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: "desktop";
+  }
+  #menuimg{
+    width: 104px;
+  }
+
+  #Describe{
+    font-size: 20%;
   }
 }
 
@@ -11800,6 +11840,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
   .about-us-wrapper {
     padding: 129px 0 152px;
+    margin-top: 70px;
   }
 
   .about-us-1 {
@@ -11829,7 +11870,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   }
 
   #menuimg {
-    width: 150px;
+    width: 100%;
   }
 }
 
@@ -12232,6 +12273,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
   .about-us-wrapper {
     padding: 89px 0 112px;
+    margin-top: 70px;
   }
 
   .about-us-wrapper img {
@@ -12698,13 +12740,24 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   }
 }
 
+@media (max-width: 768px) {
+  #menuimg{
+   width: 60%;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   .widget_person {
     padding: 10px;
   }
 
-  #menuimg {
-    width: 120%;
+
+
+ 
+
+  .menu-thumb{
+    margin: 0;
+    width: fit-content;
   }
 
   .our-menu-wrapper .menu-item h5 {
@@ -12730,6 +12783,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   h1 {
     font-size: 35px;
   }
+
+
 
   .our-menu-wrapper .menu-item h5 {
     font-size: 23px;
@@ -13276,7 +13331,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .menu-navigation ul li {
     margin-right: 0 !important;
     width: 50%;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
 
   .menu-wrapper {
@@ -14016,22 +14071,40 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   }
 }
 
+@media (max-width: 400px) {
+  
+}
+
 @media (max-width: 375px) {
   #menuimg {
-    width: 166%;
-    margin-left: -14px;
+    width: 162px;
   }
 
   #mapgoogle {
     width: 100%;
   }
+
+  .price{
+    font-size: 20px;
+  }
+
+  .menu-item h5.color-fff a{
+    font-size: 13px;
+  }
 }
 
 #Describe {
   color: #fff;
-  margin-top: 9px;
+  margin-top: 3px;
+  font-size: 13px;
+
 }
 
 #headlogo {
-  width: 50px;
+  width: 120%;
+}
+
+
+.woocommerce{
+  color: white;
 }
