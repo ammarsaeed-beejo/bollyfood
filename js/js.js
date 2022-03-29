@@ -611,10 +611,9 @@ var categorys = [
   { title: "رز", data: "rice" },
   { title: "سمك", data: "sea" },
   { title: "دجاج", data: "chicken" },
-  { title: "دجاج<br>", data: "chicken" },
   { title: "ساندوش", data: "sandwich" },
   { title: "مشروبات", data: "drink" },
-  { title: "كومبو", data: "kombo" },
+  // { title: "كومبو", data: "kombo" },
   { title: "مقبلات", data: "side-dishes" },
   { title: "وجبات", data: "wajbat" },
 ];
@@ -739,15 +738,13 @@ function add(id) {
       con2.push(products[index].id);
       document.getElementById("tableProducts").innerHTML += `
       <td class="product-remove">
-      <button class="btn btn-danger" onclick="remove(${
-        products[index].id
-      })">X</button>
+      <button class="btn btn-danger" onclick="remove(${products[index].id
+        })">X</button>
     </td>
 
     <td class="product-thumbnail">
       <a href="">
-        <img id="cartimg" src="${
-          products[index].img
+        <img id="cartimg" src="${products[index].img
         }" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" />
       </a>						
     </td>
@@ -757,27 +754,22 @@ function add(id) {
     </td>
 
     <td class="product-price" data-title="السعر">
-      <span class="woocommerce-Price-amount amount">${
-        products[index].price
-      } jd</span>	
+      <span class="woocommerce-Price-amount amount">${products[index].price
+        } jd</span>	
     </td>
     <td class="product-quantity" data-title="الكمية">
       <div class="quantity">
-      <button class="btn btn-primary" onclick="reduceAmount(${
-        products[index].id
-      })">-</button>
-       <input style="width: 2rem;" id="input${products[index].id}" value="${
-        products[index].quantity
-      }" disabled>
-       <button class="btn btn-primary" onclick="addAmount(${
-         products[index].id
-       })" >+</button>
+      <button id="addbt" class="btn btn-primary" onclick="reduceAmount(${products[index].id
+        })">-</button>
+       <input style="width: 2rem;" id="input${products[index].id}" value="${products[index].quantity
+        }" disabled>
+       <button id="addbt" class="btn btn-primary" onclick="addAmount(${products[index].id
+        })" >+</button>
       </div>
     </td>
     <td class="product-subtotal" data-title="الاجمالي">
-      <span class="woocommerce-Price-amount amount">${
-        products[index].price * products[index].quantity
-      } jd</span>		
+      <span class="woocommerce-Price-amount amount">${products[index].price * products[index].quantity
+        } jd</span>		
     </td>
     
      
@@ -789,14 +781,12 @@ function add(id) {
     }
   }
 
-  document.getElementById("total").innerHTML = `
-   
-   
-   <td> ${total()} jd</td>
-   
- 
- 
-   `;
+  document.getElementById("total").innerHTML = `<td> ${total()} jd</td>  `;
+
+
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
 function remove(id) {
@@ -833,16 +823,14 @@ function updateCart() {
 
 
         <td class="product-remove">
-       <button class="btn btn-danger" onclick="remove(${
-         products[index3].id
-       })">X</button>
+       <button class="btn btn-danger" onclick="remove(${products[index3].id
+          })">X</button>
 										</td>
 
 										<td class="product-thumbnail">
 											<a href="">
-												<img id="cartimg" src="${
-                          products[index3].img
-                        }" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" />
+												<img id="cartimg" src="${products[index3].img
+          }" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" />
 											</a>						
 										</td>
 
@@ -851,27 +839,22 @@ function updateCart() {
 										</td>
 
 										<td class="product-price" data-title="السعر">
-											<span class="woocommerce-Price-amount amount">${
-                        products[index3].price
-                      } jd</span>	
+											<span class="woocommerce-Price-amount amount">${products[index3].price
+          } jd</span>	
 										</td>
 										<td class="product-quantity" data-title="الكمية">
 											<div class="quantity">
-                      <button class="btn btn-primary" onclick="reduceAmount(${
-                        products[index3].id
-                      })">-</button>
-                       <input style="width: 2rem;" id="input${
-                         products[index3].id
-                       }" value="${products[index3].quantity}" disabled>
-                       <button class="btn btn-primary" onclick="addAmount(${
-                         products[index3].id
-                       })" >+</button>
+                      <button class="btn btn-primary" onclick="reduceAmount(${products[index3].id
+          })">-</button>
+                       <input style="width: 2rem;" id="input${products[index3].id
+          }" value="${products[index3].quantity}" disabled>
+                       <button class="btn btn-primary" onclick="addAmount(${products[index3].id
+          })" >+</button>
 											</div>
 										</td>
 										<td class="product-subtotal" data-title="الاجمالي">
-											<span class="woocommerce-Price-amount amount">${
-                        products[index3].price * products[index3].quantity
-                      } jd</span>		
+											<span class="woocommerce-Price-amount amount">${products[index3].price * products[index3].quantity
+          } jd</span>		
 										</td>
         
           
