@@ -28,7 +28,7 @@ main {
 
 #menuimg {
   width: 40%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #time_picker {
@@ -39,12 +39,18 @@ main {
 }
 
 #filterItems {
-  width: 70px;
+  width: 60px;
   background-color: #026C73;
   color: #f7ac40;
   padding: 4px 6px 6px 6px;
   margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 10pt;
+  border: none;
 }
+
+
 
 .btn-primary {
   height: 31.9px;
@@ -11861,7 +11867,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
   .our-menu-wrapper .right-content .inner {
     padding-bottom: 85px;
-    border-left: 1px solid #f7ac40;
   }
 
   .our-menu-wrapper .right-content .content {
@@ -11870,7 +11875,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
   .our-menu-wrapper .menu-holder.fixed .menu-thumb {
     margin-right: 12px;
-  }
+    width: auto;
+    }
 
   .about-us-wrapper {
     padding: 129px 0 152px;
@@ -12778,6 +12784,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   #menuimg {
     width: 60%;
   }
+  #menu-thumb{
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -13392,7 +13401,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   }
 
   .menu-holder.fixed .menu-thumb {
-    margin-bottom: 20px;
     margin-right: 0;
   }
 
@@ -13516,12 +13524,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   }
 
   .our-menu-wrapper .menu-holder.fixed .menu-thumb {
-    margin-bottom: 10px;
     margin-right: 0;
   }
 
   .our-menu-wrapper .menu-holder.fixed .menu-item {
-    padding: 10px;
+    padding:0;
   }
 
   .our-menu-wrapper .menu-holder.fixed.right-40,

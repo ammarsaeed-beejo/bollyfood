@@ -943,7 +943,7 @@ function renderItems() {
 function renderCategory() {
   for (let index = 0; index < categorys.length; index++) {
     document.getElementById("category").innerHTML += `
-      <button id="filterItems" class="btn btn-primary" type = "button" onclick = "filterItems('${categorys[index].data}')">
+      <button id="filterItems" class="btn btn-primary shadow-none" type = "button" onclick = "filterItems('${categorys[index].data}')">
       <li>
           <span>${categorys[index].title}</span>
         </a>
